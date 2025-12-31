@@ -215,3 +215,33 @@ pre {
         padding: 16px;
     }
 }
+/* ===============================
+   FIX: Java language field (FINAL)
+   =============================== */
+
+select.locked {
+    width: 100%;
+    padding: 14px;
+
+    /* Kill native dropdown UI */
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+
+    /* REAL background fix */
+    background: #0e1626 !important;
+    box-shadow: inset 0 0 0 1000px #0e1626 !important;
+
+    color: #9ca3af !important;
+    border: 1px solid #243244;
+    border-radius: 10px;
+
+    pointer-events: none;
+    cursor: default;
+}
+
+/* Hide arrow in legacy Edge */
+select.locked::-ms-expand {
+    display: none;
+}
+
