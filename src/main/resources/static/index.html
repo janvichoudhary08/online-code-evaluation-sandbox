@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Code Evaluation Sandbox</title>
+
+    <!-- Font for code editor -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+
+    <!-- CSS will be added next -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <h1>Code Evaluation Sandbox</h1>
+    <p>Execute and validate Java programs in a controlled environment</p>
+</header>
+
+<!-- Main Container -->
+<main class="container">
+
+    <!-- Language Selector -->
+    <div class="field">
+        <label for="language">Language</label>
+        <select id="language" disabled>
+            <option value="java">Java</option>
+        </select>
+    </div>
+
+    <!-- Code Editor -->
+    <div class="field">
+        <label for="sourceCode">Source Code</label>
+        <textarea id="sourceCode" spellcheck="false">
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+            </textarea>
+    </div>
+
+    <!-- Input / Expected Output -->
+    <div class="grid">
+
+        <div class="field">
+            <label for="input">Input</label>
+            <textarea id="input" placeholder="Enter input here (stdin)"></textarea>
+        </div>
+
+        <div class="field">
+            <label for="expectedOutput">Expected Output</label>
+            <textarea id="expectedOutput" placeholder="Expected program output"></textarea>
+        </div>
+
+    </div>
+
+    <!-- Run Button -->
+    <div class="actions">
+        <button id="runBtn">▶ Run Program</button>
+    </div>
+
+    <!-- Result Panel -->
+    <section class="result">
+        <h2>Result</h2>
+
+        <div class="result-row">
+            <span>Status:</span>
+            <span id="status">—</span>
+        </div>
+
+        <div class="result-row">
+            <span>Verdict:</span>
+            <span id="verdict">—</span>
+        </div>
+
+        <div class="result-row">
+            <span>Time:</span>
+            <span id="time">—</span>
+        </div>
+
+        <div class="output">
+            <label>Output / Error</label>
+            <pre id="output">—</pre>
+        </div>
+    </section>
+
+</main>
+
+<!-- JS will be added next -->
+<script src="script.js"></script>
+
+</body>
+</html>
